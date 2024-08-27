@@ -1,33 +1,42 @@
 // Fortune Cookie Phrases
-const initialPhrase = [
-    'When life gives you lemons, ',
-    'If at first you don\'t succeed, ',
-    'Always remember that you\'re unique, ',
-    'My bed is a magical place, ',
-    'If you think nobody cares, ',
-    'You can\'t make everyone happy, ',
-    'Why be moody, '
-  ];
-  
-  const middlePhrase = [
-    'just add vodka, ',
-    'try sending yourself a bill, ',
-    'when you can be a fruit salad, ',
-    'try missing a few payments, ',
-    'just like everyone else, ',
-    'embrace your weirdness, ',
-    'at a yellow submarine, '
-  ];
-  
-  const lastPhrase = [
-    'and then everything will be just fine.',
-    'but it got caught in traffic.',
-    'because logic is overrated.',
-    'at least the bill will get some attention.',
-    'but you can at least try with tacos.',
-    'that\'s just how I roll.',
-    'your efforts will show.'
-  ];
+const Phrases = [
+  {
+    type: 'initial',
+    phrases: [
+      'When life gives you lemons, ',
+      'If at first you don\'t succeed, ',
+      'Always remember that you\'re unique, ',
+      'My bed is a magical place, ',
+      'If you think nobody cares, ',
+      'You can\'t make everyone happy, ',
+      'Why be moody, '
+    ]
+  },
+  {
+    type: 'middle',
+    phrases: [
+      'just add vodka, ',
+      'try sending yourself a bill, ',
+      'when you can be a fruit salad, ',
+      'try missing a few payments, ',
+      'just like everyone else, ',
+      'embrace your weirdness, ',
+      'at a yellow submarine, '
+    ]
+  },
+  {
+    type: 'last',
+    phrases: [
+      'and then everything will be just fine.',
+      'but it got caught in traffic.',
+      'because logic is overrated.',
+      'at least the bill will get some attention.',
+      'but you can at least try with tacos.',
+      'that\'s just how I roll.',
+      'your efforts will show.'
+    ]
+  }
+];
 
 //Math Function
 
