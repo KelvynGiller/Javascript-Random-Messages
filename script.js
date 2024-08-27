@@ -38,12 +38,9 @@ const Phrases = [
   }
 ];
 
-//Math Function
+//New Math.random Function
 
-const getRandomElement = (arr) => {
-    return arr[Math.floor(Math.random()* arr.length)]
-}
-//console.log(randomMath(lastPhrase)) --- function test
+const getRandomElement = (arr) => arr[Math.floor(Math.random() * arr.length)];
 
 //Fortune Cookie Function
 
