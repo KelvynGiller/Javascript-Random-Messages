@@ -1,58 +1,73 @@
-// Fortune Cookie Phrases
+// Array of phrase objects categorized by type
 const Phrases = [
+  // Initial phrases
   {
     type: 'initial',
     phrases: [
-      'When life gives you lemons, ',
-      'If at first you don\'t succeed, ',
-      'Always remember that you\'re unique, ',
-      'My bed is a magical place, ',
-      'If you think nobody cares, ',
-      'You can\'t make everyone happy, ',
-      'Why be moody, '
+      'Why so serious, ',
+      'Be yourself, ',
+      'Take a risk, ',
+      'Keep it simple, ',
+      'Life\'s a joke, ',
+      'Stay focused, ',
+      'Be curious, ',
+      'Smile more, ',
+      'Dream big, ',
+      'Stay weird, ',
+      'Keep going, '
     ]
   },
+  // Middle phrases
   {
     type: 'middle',
     phrases: [
-      'just add vodka, ',
-      'try sending yourself a bill, ',
-      'when you can be a fruit salad, ',
-      'try missing a few payments, ',
-      'just like everyone else, ',
-      'embrace your weirdness, ',
-      'at a yellow submarine, '
+      'and enjoy the ride, ',
+      'and laugh more, ',
+      'but stay humble, ',
+      'you might win, ',
+      'and see what happens, ',
+      'just roll with it, ',
+      'and stay on track, ',
+      'find answers, ',
+      'it suits you, ',
+      'reach for the stars, ',
+      'it\'s your power, ',
+      'and don\'t stop, '
     ]
   },
+  // Last phrases
   {
     type: 'last',
     phrases: [
-      'and then everything will be just fine.',
-      'but it got caught in traffic.',
-      'because logic is overrated.',
-      'at least the bill will get some attention.',
-      'but you can at least try with tacos.',
-      'that\'s just how I roll.',
-      'your efforts will show.'
+      'it\'ll all be fine.',
+      'because why not?',
+      'it\'s worth it.',
+      'or at least learn.',
+      'life is an experiment.',
+      'because it\'s fun.',
+      'success will follow.',
+      'you\'ll discover more.',
+      'good vibes only.',
+      'it\'s possible.',
+      'weird is good.',
+      'great things await.'
     ]
   }
 ];
 
-//New Math.random Function
-
+// Function to get a random element from an array
 const getRandomElement = (arr) => arr[Math.floor(Math.random() * arr.length)];
 
-//Fortune Cookie Function
-
+// Function to generate a complete fortune cookie message
 const fortuneCookie = () => {
+  // Extract phrases based on their type
   const initialPhrases = Phrases.find(p => p.type === 'initial').phrases;
   const middlePhrases = Phrases.find(p => p.type === 'middle').phrases;
   const lastPhrases = Phrases.find(p => p.type === 'last').phrases;
 
+  // Generate and return the complete fortune cookie message
   return `You have opened your fortune cookie! The message is: ${getRandomElement(initialPhrases)}${getRandomElement(middlePhrases)}${getRandomElement(lastPhrases)}`;
 }
 
-
-// function log 
-console.log(fortuneCookie())
-
+// Log the generated message to the console
+console.log(fortuneCookie());
