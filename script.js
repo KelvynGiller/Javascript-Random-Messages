@@ -44,10 +44,15 @@ const getRandomElement = (arr) => arr[Math.floor(Math.random() * arr.length)];
 
 //Fortune Cookie Function
 
-const fortuneCookie = (arr1, arr2, arr3) => {
-    return `You have oppened your fortune cookie! The message is: ${getRandomElement(arr1)}${getRandomElement(arr2)}${getRandomElement(arr3)} `
+const fortuneCookie = () => {
+  const initialPhrases = Phrases.find(p => p.type === 'initial').phrases;
+  const middlePhrases = Phrases.find(p => p.type === 'middle').phrases;
+  const lastPhrases = Phrases.find(p => p.type === 'last').phrases;
+
+  return `You have opened your fortune cookie! The message is: ${getRandomElement(initialPhrases)}${getRandomElement(middlePhrases)}${getRandomElement(lastPhrases)}`;
 }
 
 
-// First test 
-console.log(fortuneCookie(initialPhrase, middlePhrase, lastPhrase))
+// function log 
+console.log(fortuneCookie())
+
