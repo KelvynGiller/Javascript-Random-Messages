@@ -58,14 +58,19 @@ const Phrases = [
 // Function to get a random element from an array
 const getRandomElement = (arr) => arr[Math.floor(Math.random() * arr.length)];
 
-// Function to generate a complete fortune cookie message
+// Function to generate a complete fortune cookie message 
 const fortuneCookie = () => {
   // Extract phrases based on their type
   const initialPhrases = Phrases.find(p => p.type === 'initial').phrases;
   const middlePhrases = Phrases.find(p => p.type === 'middle').phrases;
   const lastPhrases = Phrases.find(p => p.type === 'last').phrases;
 
-  // Generate and return the complete fortune cookie message
+  // Check if arrays are not empty
+  if (initialPhrases.length === 0 || middlePhrases.length === 0 || lastPhrases.length === 0) {
+    return 'Error: One or more arrays are empty. Please check your data.';
+  }
+
+  // Generate the fortune cookie message if arrays are valid
   return `You have opened your fortune cookie! The message is: ${getRandomElement(initialPhrases)}${getRandomElement(middlePhrases)}${getRandomElement(lastPhrases)}`;
 }
 
